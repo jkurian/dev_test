@@ -18,6 +18,18 @@ class errorHandler {
     }
 
     // Code goes here
+    private function call() {
+        errorsHappen();
+    }
+}
+// I am not familiar with PHP at all so I hope this makes sense! I have written in Java before 
+// So I am familiar with these concepts
+// Code goes here
+try {
+    $p = new errorHandler();
+    $p -> call();
 }
 
-// Code goes here
+catch(Exception $e) {
+  echo 'Error: ' .$e->getMessage();
+}

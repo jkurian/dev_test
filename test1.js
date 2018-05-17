@@ -1,19 +1,19 @@
 /**
  * Given the following JSON, Map the mediaUrls into an array of URLs.
-
    Expected Output: [ “https://someurl”, “http://anotherurl”, ... ];
  *
  */
 let data = [
     {
-        "stream": {"id": 9},
+        "stream": { "id": 9 },
         "socialPost": {
             "platformName": "Instagram",
             "mediaUrl": "https://scontent-iad3-1.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/18013387_1750169198628474_7627477913259999232_n.jpg"
         }
     },
     {
-        "stream": {"id": 10
+        "stream": {
+            "id": 10
         },
         "socialPost": {
             "platformName": "Twitter",
@@ -21,7 +21,8 @@ let data = [
         }
     },
     {
-        "stream": {"id": 30
+        "stream": {
+            "id": 30
         },
         "socialPost": {
             "platformName": "Instagram",
@@ -29,10 +30,16 @@ let data = [
         }
     }
 ];
+
 let output = [];
 
 // Your code here
+const extractMediaUrls = (data) => {
+    return data.map((elem) => {
+        return elem.socialPost.mediaUrl
+    })
+}
+
+output = extractMediaUrls(data);
 
 console.log(output);
-
-

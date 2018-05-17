@@ -13,3 +13,12 @@ let colorsArray = [
 ];
 
 // your code goes here
+const chalk = require('chalk');
+
+const logColors = (colors) => {
+    for(let color of colors) {
+        console.log(chalk[color]('hello world!'))
+    }
+}
+
+logColors(colorsArray);
