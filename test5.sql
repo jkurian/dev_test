@@ -18,6 +18,6 @@ SELECT *, SUM(order_amount) FROM users
   LEFT JOIN orders on orders.user_id = users.user_id
 GROUP BY users.user_id, orders.user_id
 
-# Statement 2
+# Statement 2 -- incomplete
 SELECT * FROM products
   LEFT JOIN orders on products.id = orders.product_id
