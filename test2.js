@@ -17,7 +17,7 @@ const chalk = require('chalk');
 
 const logColors = (colors) => {
     for(let color of colors) {
-        console.log(chalk[color]('hello world!'))
+        console.log(chalk[color]('Hello World'))
     }
 }
 

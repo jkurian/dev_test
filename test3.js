@@ -7,7 +7,8 @@
 
 const fs = require('fs');
 const fileName = './test.txt'
-fs.writeFile(fileName, "Hello world!", function (err) {
+const value = 'Hello World!'
+fs.writeFile(fileName, value, function (err) {
   if (err) {
     return console.log(err);
   }
