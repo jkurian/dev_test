@@ -13,9 +13,11 @@
 # - List all of the products and concatenate the usernames of the users who bought it
 #   (Expected output: product_id, product_name, usernames) (usernames = john@packwire.com,phil@packwire.com)
 
-```sql
+# Statement 1
 SELECT *, SUM(order_amount) FROM users
   LEFT JOIN orders on orders.user_id = users.user_id
 GROUP BY users.user_id, orders.user_id
 
-```
+# Statement 2
+SELECT * FROM products
+  LEFT JOIN orders on products.id = orders.product_id
